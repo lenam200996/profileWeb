@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lê Văn Nam</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style/style.css" rel="stylesheet">
+        <link href="fonts/myriad-pro/style.css" rel="stylesheet">
+        <link href="fonts/fontawesome/css/all.css" rel="stylesheet">
+        <link rel="shortcut icon" href="images/avatar.jpg" />
+        <script src="style/jquery-3.3.1.min.js" ></script>
+      
+    </head>
+    <body onload="onload()">
+        <div class="container">
+            <div class="topmenu">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo" width="120%" height="110%">
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li class="active" id="homemenu">
+                            <a href="javascript:moveDown('homemenu')">Home</a>
+                        </li>
+                        <li id="aboutmenu">
+                            <a href="javascript:moveUpAbout('aboutmenu')">About</a>
+                        </li>
+                        <li id="hobbymenu">
+                            <a href="javascript:moveUpHobby('hobbymenu')">Hobby</a>
+                        </li>
+                        <li id="contactmenu">
+                            <a href="javascript:moveUpContact('contactmenu')">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact">
+                    <button>Contact Me</button>
+                </div>
+            </div>
+            <div class="context">
+                    <div class="left">
+                           <div class="lefttop">
+                               <div class="name">
+                                    <span id="nametext">Hello, I'm Nam</span>
+                               </div>
+                               <!------------>
+                               <div class="contactdiv">
+                                    aaaa a a a a a a a  a a a a a a
+                                     aaa a aaaa aaa aaa
+                               </div>
+                               <!--------->
+                               <div class="hobby">
+                                    aaaa a a a a a a a  a a a a a a
+                                     aaa a aaaa aaa aaa
+                               </div>
+
+                               <!-------->
+                               <div class="about" >
+                                   <table>
+                                       <tr>
+                                           <td>Name:</td>
+                                           <td class="value">Nam Le Van</td>
+                                       </tr>
+                                       <tr>
+                                            <td>Birthday:</td>
+                                            <td class="value"> 20-09</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gender:</td>
+                                            <td class="value">Male</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gmail:</td>
+                                            <td class="value">vannam2000996@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Phone:</td>
+                                            <td class="value">+84349018428</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Education:</td>
+                                            <td class="value">Vinh University</td>
+                                        </tr>
+                                        <tr>
+                                                <td>Skills: </td>
+                                                <td>
+                                                        <div class="myProgress">
+                                                                <div id="myBarJava">Java</div>
+                                                        </div>
+                                                        
+                                                        <div class="myProgress">
+                                                                <div id="myBarPHP">PHP</div>
+                                                        </div>
+
+                                                        <div class="myProgress">
+                                                                <div id="myBarCShape">C#</div>
+                                                        </div>
+
+                                                        <div class="myProgress">
+                                                                <div id="myBarJavascript">Javascript</div>
+                                                        </div>
+                                                        
+                                                        <div class="myProgress">
+                                                                <div id="myBarmobile">Android/IOS</div>
+                                                        </div>
+                                                </td>
+                                        </tr>
+                                   </table>
+                                           
+                                   
+                                </div>
+                                <!-------->
+                               <div class="job">
+                                    <span class="jobdetails">Mobile <span style="color:orange">Developer</span></span><br>
+                                    <span class="jobdetails" style="color:orange"><i class="fas fa-link"></i></span> <br>
+                                    <span class="jobdetails"><span style="color:orange">Web</span> Developer</span>
+                               </div>
+                              
+                           </div>
+                           <div class="leftbottom">
+                                <span id="follow">Follow me: </span><br>
+                                <div class="icon"><i class="fab fa-facebook-f" style="color:#4267b2"></i></div> 
+                                <div class="icon"><i class="fab fa-twitter" style="color:#5da9dd"></i></div>
+                                <div class="icon"><i class="fab fa-google-plus-g" style="color:#dc4e41"></i></div>
+                                <div class="icon"><i class="fab fa-instagram" style="color:#cf2057"></i></div>
+                           </div>
+                    </div>
+                    <div class="right">
+                        <img src="images/avatar.jpg" alt="Lê Văn Nam" width="85%" height="90%" style="margin-top:10%;">
+                    </div>
+            </div>  
+        </div>
+        <script>
+         
+
+                var move = $('#nametext').outerWidth();
+               $(".container").css("height", screen.height-screen.height*0.16);
+               $(".logo").css("line-height",$(".logo").height()+"px");
+               $(".menu").css("line-height",$(".menu").height()+"px");
+               $(".contact").css("line-height",$(".contact").height()+"px");  
+               function onload(){
+                    setTimeout(function(){
+                        $('.container').css('opacity','1');
+                },200);
+               } 
+               
+               function changeMenu(idname){
+                    //tam thoi
+                    $('#homemenu').removeClass('active');
+                    $('#hobbymenu').removeClass('active');
+                    $('#aboutmenu').removeClass('active');
+                    $('#contactmenu').removeClass('active');
+                    $('#'+idname).addClass('active');
+               }
+               function moveUpAbout(idname){
+                   //-----change menu
+                   changeMenu(idname);
+                   //-----set title
+                    $('title').text("About");
+                    //-----
+                    
+                   if($('.job').css("opacity") === '1'){
+                    $('#nametext').css("transform","translateY(-"+( $('#nametext').outerWidth()-(screen.height-130)*0.15)+"px)");
+                    
+                    $('.job').css("padding-left","0%");
+                    $('.job').css("opacity","0");
+                   
+                   
+
+                    $('.about').css("transition-delay","1s");
+                    $('.about').css("transform","translateY(-"+( $('#nametext').outerWidth()-(screen.height-130)*0.08)+"px)");
+                    $('.about').css("animation","about-ani 5s forwards");
+
+                   
+                   
+                    //--------------------
+                    setTimeout(function(){
+                    var elem = document.getElementById("myBarJava"); 
+                    var width = 1;
+                    var id = setInterval(frame, 15);
+                    function frame() {
+                        if (width >= 70) {
+                        clearInterval(id);
+                        } else {
+                        width++; 
+                        elem.style.width = width + '%'; 
+                        }
+                    }
+                },1500);
+                //---
+                setTimeout(function(){
+                    var elem = document.getElementById("myBarPHP"); 
+                    var width = 1;
+                    var id = setInterval(frame, 10);
+                    function frame() {
+                        if (width >= 80) {
+                        clearInterval(id);
+                        } else {
+                        width++; 
+                        elem.style.width = width + '%'; 
+                        }
+                    }
+                },2000);
+                //---
+                setTimeout(function(){
+                    var elem = document.getElementById("myBarCShape"); 
+                    var width = 1;
+                    var id = setInterval(frame, 10);
+                    function frame() {
+                        if (width >= 40) {
+                        clearInterval(id);
+                        } else {
+                        width++; 
+                        elem.style.width = width + '%'; 
+                        }
+                    }
+                },2000);
+                //---
+                setTimeout(function(){
+                    var elem = document.getElementById("myBarJavascript"); 
+                    var width = 1;
+                    var id = setInterval(frame, 10);
+                    function frame() {
+                        if (width >= 90) {
+                        clearInterval(id);
+                        } else {
+                        width++; 
+                        elem.style.width = width + '%'; 
+                        }
+                    }
+                },2000);
+
+                setTimeout(function(){
+                    var elem = document.getElementById("myBarmobile"); 
+                    var width = 1;
+                    var id = setInterval(frame, 10);
+                    function frame() {
+                        if (width >= 50) {
+                        clearInterval(id);
+                        } else {
+                        width++; 
+                        elem.style.width = width + '%'; 
+                        }
+                    }
+                },2000);
+                document.getElementById("nametext").innerHTML = "ABOUT ME";
+                    }else{
+                        if( $('.hobby').css("opacity") != "0"){
+                            $('.hobby').css("transition-delay","0s");
+                            $('.hobby').css("transform","translateY(0px)");
+                            $('.hobby').css("animation","fade 1s forwards");
+                        }
+                   
+                    //----------
+                    if( $('.contactdiv').css("opacity") != "0"){
+                        $('.contactdiv').css("transition-delay","0s");
+                        $('.contactdiv').css("transform","translateY(0px)");
+                        $('.contactdiv').css("animation","fade 1s forwards");
+                    }
+                   
+                  
+                    //-------
+                    $('.about').css("transition-delay","1s");
+                    $('.about').css("transform","translateY(-"+( move-(screen.height-130)*0.08)+"px)");
+                    $('.about').css("animation","about-ani 5s forwards");
+                     //--------------------
+                     setTimeout(function(){
+                    var elem = document.getElementById("myBarJava"); 
+                    var width = 1;
+                    var id = setInterval(frame, 15);
+                    function frame() {
+                        if (width >= 70) {
+                        clearInterval(id);
+                        } else {
+                        width++; 
+                        elem.style.width = width + '%'; 
+                        }
+                    }
+                },1500);
+                //---
+                setTimeout(function(){
+                    var elem = document.getElementById("myBarPHP"); 
+                    var width = 1;
+                    var id = setInterval(frame, 10);
+                    function frame() {
+                        if (width >= 80) {
+                        clearInterval(id);
+                        } else {
+                        width++; 
+                        elem.style.width = width + '%'; 
+                        }
+                    }
+                },2000);
+                //---
+                setTimeout(function(){
+                    var elem = document.getElementById("myBarCShape"); 
+                    var width = 1;
+                    var id = setInterval(frame, 10);
+                    function frame() {
+                        if (width >= 40) {
+                        clearInterval(id);
+                        } else {
+                        width++; 
+                        elem.style.width = width + '%'; 
+                        }
+                    }
+                },2000);
+                //---
+                setTimeout(function(){
+                    var elem = document.getElementById("myBarJavascript"); 
+                    var width = 1;
+                    var id = setInterval(frame, 10);
+                    function frame() {
+                        if (width >= 90) {
+                        clearInterval(id);
+                        } else {
+                        width++; 
+                        elem.style.width = width + '%'; 
+                        }
+                    }
+                },2000);
+                    document.getElementById("nametext").innerHTML = "ABOUT ME";
+                    }
+            
+               }
+//-----------------------------
+function moveUpHobby(idname){
+     //-----change menu
+     changeMenu(idname);
+    //-----set title
+    $('title').text("Hobby");
+    //-----if
+    if($('.job').css("opacity") === '1'){
+                    $('#nametext').css("transform","translateY(-"+(move-(screen.height-130)*0.15)+"px)");
+                    
+                    $('.job').css("padding-left","0%");
+                    $('.job').css("opacity","0");
+                   
+                    //$('.icon').css("transform","translateY(50px)");
+                    //$('.icon').css("opacity","0");
+                    //$('#follow').css("transform","translateY(50px)");
+                   // $('#follow').css("opacity","0");
+                    $('.hobby').css("transition-delay","1s");
+                    $('.hobby').css("transform","translateY(-"+(move-(screen.height-130)*0.12)+"px)");
+                    $('.hobby').css("animation","about-ani 5s forwards");
+
+                   
+                   
+                   
+                document.getElementById("nametext").innerHTML = "My Hobby";
+                }
+                //----end if
+                else{
+                    if( $('.about').css("opacity") != "0"){
+                    $('.about').css("transition-delay","0s");
+                    $('.about').css("transform","translateY(0px)");
+                    $('.about').css("animation","fade 1s forwards");
+                    }
+                    if( $('.contactdiv').css("opacity") != "0"){
+                    $('.contactdiv').css("transition-delay","0s");
+                    $('.contactdiv').css("transform","translateY(0px)");
+                    $('.contactdiv').css("animation","fade 1s forwards");
+                    }
+                    $('.hobby').css("transition-delay","1s");
+                    $('.hobby').css("transform","translateY(-"+(move-(screen.height-130)*0.12)+"px)");
+                    $('.hobby').css("animation","about-ani 5s forwards");
+                    document.getElementById("nametext").innerHTML = "My Hobby";
+                }
+              
+}
+//-------------------------
+function moveUpContact(idname){
+     //-----change menu
+     changeMenu(idname);
+    //-----set title
+    $('title').text("Contact");
+    //-----if
+    if($('.job').css("opacity") === '1'){
+                    $('#nametext').css("transform","translateY(-"+(move-(screen.height-130)*0.15)+"px)");
+                    
+                    $('.job').css("padding-left","0%");
+                    $('.job').css("opacity","0");
+                  
+                    //$('.icon').css("transform","translateY(50px)");
+                    //$('.icon').css("opacity","0");
+                    //$('#follow').css("transform","translateY(50px)");
+                   // $('#follow').css("opacity","0");
+                    $('.contactdiv').css("transition-delay","1s");
+                    $('.contactdiv').css("transform","translateY(-"+(move-(screen.height-130)*0.12)+"px)");
+                    $('.contactdiv').css("animation","about-ani 5s forwards");
+
+                   
+                   
+                   
+                document.getElementById("nametext").innerHTML = "My Contact";
+                }
+                //----end if
+                else{
+                   // if($('.about').css("transform") === "translateY(0px)" ) 
+                   if( $('.about').css("opacity") != "0"){
+                    $('.about').css("transition-delay","0s");
+                    $('.about').css("transform","translateY(0px)");
+                    $('.about').css("animation","fade 1s forwards");
+                    }
+                    if( $('.hobby').css("opacity") != "0"){
+                    $('.hobby').css("transition-delay","0s");
+                    $('.hobby').css("transform","translateY(0px)");
+                    $('.hobby').css("animation","fade 1s forwards");
+                    }
+
+                    $('.contactdiv').css("transition-delay","1s");
+                    $('.contactdiv').css("transform","translateY(-"+(move-(screen.height-130)*0.12)+"px)");
+                    $('.contactdiv').css("animation","about-ani 5s forwards");
+                    document.getElementById("nametext").innerHTML = "My Contact";
+                }
+            
+
+            }
+//-----------------------
+
+
+               function moveDown(idname){
+                   if( $('.job').css("opacity")=== '0'){
+                    $('#nametext').css("transform","translateY(0)");
+                    $('.job').css("padding-left","15%");
+                    $('.job').css("opacity","1");
+                    //$('.icon').css("transform","translateY(0px)");
+                   // $('.icon').css("opacity","1");
+                   // $('#follow').css("transform","translateY(0px)");
+                    //$('#follow').css("opacity","1");
+                    
+                    //--------------
+                    if( $('.about').css("opacity") != "0"){
+                        $('.about').css("transition-delay","0s");
+                        $('.about').css("transform","translateY(0px)");
+                        $('.about').css("animation","fade 1s forwards");
+                    }
+                    //---------
+                    if( $('.hobby').css("opacity") != "0"){
+                        $('.hobby').css("transition-delay","0s");
+                        $('.hobby').css("transform","translateY(0px)");
+                        $('.hobby').css("animation","fade 1s forwards");
+                    }
+                    //--------------
+                    if( $('.contactdiv').css("opacity") != "0"){
+                        $('.contactdiv').css("transition-delay","0s");
+                        $('.contactdiv').css("transform","translateY(0px)");
+                        $('.contactdiv').css("animation","fade 1s forwards");
+                    }
+
+                }
+                    //tam thoi
+                   //----change menu
+                    changeMenu(idname);
+                   //----set title
+                    $('title').text("Lê Văn Nam");
+                    document.getElementById("nametext").innerHTML = "Hello, I'm Nam";
+              
+               }
+            
+               
+        </script>   
+    </body>
+</html>

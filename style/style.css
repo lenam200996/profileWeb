@@ -1,0 +1,362 @@
+body{
+margin: 0 auto;
+font-family: "myriad-pro", sans-serif;
+text-align: center;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+button{
+    outline: none;
+    cursor: pointer;
+}
+a:hover{
+    color: orange;
+}
+table{
+    border-spacing: 20px;
+}
+.container{
+    width: 95%;
+    background-color: #2b2a2f;
+    border-radius: 50px;
+    overflow: hidden;
+    margin:10px auto;
+    opacity: 0;
+    transition: all 2s;
+}
+
+.left{
+    float: left;
+    width: 50%;
+    height: 100%;
+    transition: all 2s;
+    transform: translateX(-250px);
+    opacity: 0;
+    animation: onload-ani-left 2s forwards;
+}
+
+.right{
+    float: left;
+    width: 50%;
+    height: 100%;
+    transition: all 2s;
+    transform: translateX(250px);
+    opacity: 0;
+    animation: onload-ani-right 2s forwards;
+}
+
+@keyframes onload-ani-right{
+    0%{
+        transform: translateX(250px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes onload-ani-left{
+    0%{
+        transform: translateX(-250px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.topmenu{
+    height: 10%;
+    transition: all 2s;
+    transform: translateY(-250px);
+    opacity: 0;
+    animation: onload-ani-topmenu 2s forwards;
+}
+
+@keyframes onload-ani-topmenu{
+    0%{
+        transform: translateY(-250px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.context{
+    height: 90%;
+}
+.logo{
+    float: left;
+    width: 20%;
+    height: 100%;
+   
+}
+.menu{
+    float: left;
+    width: 60%;
+    color:white;
+}
+
+.contact{
+    float: left;
+    width: 20%;
+    height: 100%;
+}
+
+.menu ul {
+    list-style: none; 
+}
+
+.menu ul li {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+.active{
+    border-radius: 20px;
+    border-top: 1px solid orange;
+    color: orange !important;
+}
+.active a{
+    color:orange;
+}
+.contact button {
+    height: 55%;
+    border-radius: 20px;
+    border:none;
+    background-color: orange;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.lefttop{
+    height: 80%;
+    border-left: 2px dotted orange;
+    margin-left: 10%;
+    overflow: hidden;
+   
+}
+.leftbottom{
+    height: 19%;
+    border-left: 2px solid orange;
+    margin-left: 10%;
+    padding-left: 15%;
+    text-align: left;
+    line-height: 30px;
+   color: #7c7a7a;
+}
+
+.name{
+    height: 50%;    
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    font-size: 40px;
+    color: white;
+    font-weight: 700;
+    text-align: left;
+    padding-left: 15%;
+    padding-bottom: 5%;
+    transition: all 2s;
+}
+#nametext{
+    transition: all 1s;
+
+}
+
+#follow{
+    transition: all 2s;
+}
+#homemenu{
+    transition: all 1s;
+}
+#aboutmenu{
+    transition: all 1s;
+   
+}
+#hobbymenu{
+    transition: all 1s;
+    
+}
+#contactmenu{
+    transition: all 1s;
+    
+}
+.job{
+    height: 50%;
+    font-size: 50px;
+    color: white;
+    font-weight: 700;
+    text-align: left;
+    padding-left: 15%;
+    margin-bottom: 10px;
+    transition: all 1s;
+}
+.icon{
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+    border: .5px dotted orange;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 50%;
+    float: left;
+    transition: all 1s;
+}
+.about{
+    opacity: 0;
+    height: 0%;
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    text-align: left;
+    padding-left: 15%;
+    margin-bottom: 10px;
+    transition: all 1s; 
+    transition-delay:0.5s;
+}
+
+.hobby{
+    opacity: 0;
+    height: 0%;
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    text-align: left;
+    padding-left: 15%;
+    margin-bottom: 10px;
+    transition: all 1s; 
+    transition-delay:0.5s;
+}
+.contactdiv{
+    opacity: 0;
+    height: 0%;
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    text-align: left;
+    padding-left: 15%;
+    margin-bottom: 10px;
+    transition: all 1s; 
+    transition-delay:0.5s;
+}
+
+@keyframes fade{
+    from{
+        opacity: 1;
+    }to{
+        opacity: 0;
+    }
+}
+
+@keyframes about-ani{
+    0%{
+        opacity: 0;
+        height: 0%;
+    }
+    20%{
+        opacity: 0;
+        height: 0%;
+    }
+    100%{
+        opacity: 1;
+        height: 50%;
+    }
+}
+
+@keyframes about-ani-out{
+    0%{
+        opacity: 1;
+        height: 50%;
+    }
+    50%{
+        opacity: 0;
+        height: 0%;
+    }
+    100%{
+        opacity: 0;
+        height: 0%;
+    }
+}
+
+
+.value{
+    color: orange;
+}
+/* ------------ */
+.myProgress {
+    width: 100%;
+    background-color: grey;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  #myBarJava {
+    width: 1%;
+    height: 15px;
+    background-color: orange;
+    text-align: left; 
+  line-height: 15px; 
+  color: black; 
+  font-size: 15px;
+  padding-left: 5px;
+  border-radius: 8px;
+ 
+  }
+  #myBarPHP {
+    width: 1%;
+    height: 15px;
+    background-color: orange;
+    text-align: left; 
+  line-height: 15px; 
+  color: black; 
+  font-size: 15px;
+  padding-left: 5px;
+  border-radius: 8px;
+
+  }
+  #myBarCShape {
+    width: 1%;
+    height: 15px;
+    background-color: orange;
+    text-align: left;
+  line-height: 15px; 
+  color: black; 
+  font-size: 15px;
+  padding-left: 5px;
+  border-radius: 8px;
+
+  }
+  #myBarJavascript {
+    width: 1%;
+    height: 15px;
+    background-color: orange;
+    text-align: left; 
+  line-height: 15px;
+  color: black; 
+  font-size: 15px;
+  padding-left: 5px;
+  border-radius: 8px;
+  
+  }
+  #myBarmobile{
+    width: 1%;
+    height: 15px;
+    background-color: orange;
+    text-align: left; 
+  line-height: 15px; 
+  color: black; 
+  font-size: 15px;
+  padding-left: 5px;
+  border-radius: 8px;
+  }
