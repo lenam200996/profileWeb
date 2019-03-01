@@ -2,12 +2,14 @@ body{
 margin: 0 auto;
 font-family: "myriad-pro", sans-serif;
 text-align: center;
-
+background: url('../images/bg.jpg') no-repeat;
+background-size: cover;
 }
 
 a{
     text-decoration: none;
     color: white;
+    transition: all .5s;
 }
 button{
     outline: none;
@@ -15,6 +17,7 @@ button{
 }
 a:hover{
     color: orange;
+    
 }
 table{
     border-spacing: 20px;
@@ -75,7 +78,7 @@ table{
     transition: all 2s;
     transform: translateY(-250px);
     opacity: 0;
-    animation: onload-ani-topmenu 2s forwards;
+    animation: onload-ani-topmenu 1s forwards;
 }
 
 @keyframes onload-ani-topmenu{
@@ -170,7 +173,7 @@ table{
 }
 #nametext{
     transition: all 1s;
-
+color: orange;
 }
 
 #follow{
@@ -179,17 +182,33 @@ table{
 #homemenu{
     transition: all 1s;
 }
+#homemenu:hover{
+    transform: scale(1.2,1.2);
+}
+
 #aboutmenu{
     transition: all 1s;
    
+}
+
+#aboutmenu:hover{
+    transform: scale(1.2,1.2);
 }
 #hobbymenu{
     transition: all 1s;
     
 }
+
+#hobbymenu:hover{
+    transform: scale(1.2,1.2);
+}
 #contactmenu{
     transition: all 1s;
     
+}
+
+#contactmenu:hover{
+    transform: scale(1.2,1.2);
 }
 .job{
     height: 50%;
@@ -360,3 +379,114 @@ table{
   padding-left: 5px;
   border-radius: 8px;
   }
+
+ .iconhobby{
+     font-size: 30px;
+     color: orange;
+     animation: iconhobby-ani 2s  linear  infinite;
+ }
+ @keyframes iconhobby-ani{
+     from{
+        transform: rotate(0deg);
+     }to{
+        transform: rotate(360deg);
+     }
+ }
+
+ .shape{
+     color:yellow;
+ }
+ .info{
+     color: white;
+ }
+ #tr1{
+    transform: translateX(100px);
+    opacity: 0;
+   
+    
+ }
+ #tr2{
+    transform: translateX(100px);
+    opacity: 0;
+    
+    
+ }
+ #tr3{
+    transform: translateX(100px);
+    opacity: 0;
+    
+ }
+
+ #tr4{
+    transform: translateX(100px);
+    opacity: 0;
+    
+ }
+
+ @keyframes ani-tr1{
+     0%{
+        transform: translateX(100px);
+        opacity: 0;
+     }
+     100%{
+        transform: translateX(0px);
+        opacity: 1;
+     }
+
+ }
+
+ @keyframes ani-tr2{
+    0%{
+       transform: translateX(100px);
+       opacity: 0;
+    }
+    20%{
+        transform: translateX(100px);
+        opacity: 0;
+     }
+    100%{
+       transform: translateX(0px);
+       opacity: 1;
+    }
+
+}
+@keyframes ani-tr3{
+    0%{
+       transform: translateX(100px);
+       opacity: 0;
+    }
+    40%{
+        transform: translateX(100px);
+        opacity: 0;
+     }
+    100%{
+       transform: translateX(0px);
+       opacity: 1;
+    }
+
+}
+
+@keyframes ani-tr4{
+    0%{
+       transform: translateX(100px);
+       opacity: 0;
+    }
+    60%{
+        transform: translateX(100px);
+        opacity: 0;
+     }
+    100%{
+       transform: translateX(0px);
+       opacity: 1;
+    }
+
+}
+#avatar-img{
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+#avatar-img:hover{
+  
+    transform: scale(1.05,1.05);
+}
